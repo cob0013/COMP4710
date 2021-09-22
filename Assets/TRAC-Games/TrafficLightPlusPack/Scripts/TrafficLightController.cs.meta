@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 010c5a50791f64c4e8c0eb764ffa45f7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - walkEmissionTexture: {fileID: 2800000, guid: 74a77279b47d64f2b9330c9dd429f4dd,
+      type: 3}
+  - dontwalkEmissionTexture: {fileID: 2800000, guid: 4f771fb2207494cc2b6cdce3b7e997ab,
+      type: 3}
+  - StopEmissionTexture: {fileID: 2800000, guid: 739ecb5881db448b489c7c4b79f3b2e3,
+      type: 3}
+  - WarnEmissionTexture: {fileID: 2800000, guid: 81f0e6ce1867a42bc9f96c710a2aad7c,
+      type: 3}
+  - GoEmissionTexture: {fileID: 2800000, guid: 3b2061344daae4264b5f4c5b9386bd8d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
