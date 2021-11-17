@@ -25,6 +25,12 @@ public class TrafficLightController : MonoBehaviour {
 	private bool toggleOn= true;
 	private PhaseState currentState;
 	public PhaseState startPhase;
+	public WallScript wallScr;
+
+	void Awake()
+    {
+		wallScr = GetComponentInChildren<WallScript>();
+    }
 
 	void  Start (){
 		mat = GetComponent<Renderer>().material;
@@ -70,22 +76,26 @@ public class TrafficLightController : MonoBehaviour {
 		case PhaseState.Walk:
 			if(walkEmissionTexture != null ) {
 				ApplyEmissionTexture(walkEmissionTexture);
+				wallScr.ColorChange(Color.green);
 			}
 			break;
 		case PhaseState.DontWalk:
 			if(dontwalkEmissionTexture != null) {
 				ApplyEmissionTexture(dontwalkEmissionTexture);
+				
 			}
 			break;
 		case PhaseState.Stop:
 			if(StopEmissionTexture != null) {
 				ApplyEmissionTexture(StopEmissionTexture);
-			}
+				wallScr.ColorChange(Color.red);
+				}
 			break;
 		case PhaseState.Warn:
 			if(WarnEmissionTexture != null) {
 				ApplyEmissionTexture(WarnEmissionTexture);
-			}
+				
+				}
 			break;
 		case PhaseState.Flash:
 			if(!toggleOn) {
@@ -98,7 +108,8 @@ public class TrafficLightController : MonoBehaviour {
 		case PhaseState.Go:
 			if(GoEmissionTexture != null) {
 				ApplyEmissionTexture(GoEmissionTexture);
-			}
+				wallScr.ColorChange(Color.green);
+				}
 			break;
 		case PhaseState.Off:
 			lightsEnabled = false;
