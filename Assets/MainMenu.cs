@@ -13,4 +13,8 @@ public class MainMenu : MonoBehaviour
     public void StartGame() {
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void TrafficLightSimulator() {
+        SceneManager.LoadScene("StopLight Testing");
+    }
 }

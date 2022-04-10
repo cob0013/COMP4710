@@ -36,7 +36,7 @@ public class CarController : MonoBehaviour
         UpdateWheels();
     }
 
-
+    
     private void GetInput()
     {
         horizontalInput = Input.GetAxis(HORIZONTAL);

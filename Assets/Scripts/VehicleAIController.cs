@@ -28,17 +28,34 @@ public class VehicleAIController : MonoBehaviour{
     private bool avoiding = false;
     private bool reachedTargetDistance = false;
 
+    public bool go;
+
     void Start() {
 
     }
 
+     public void drive() {
+        go = true;
+    }
+
+    public void stop() {
+        go = false;
+        applyBraking();
+    }
+
     void FixedUpdate() {
+        Debug.Log(go);
+        if (go) {
+        Debug.Log("Start Button Pressed");
+
         try{
         sensors();
         checkDistance();
         steerVehicle();
         }
         catch{}
+        }
+        
     }
 
     private void sensors() {
